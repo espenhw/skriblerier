@@ -12,6 +12,7 @@
   </head>
 {%- set tag = tags[0] %}
   <body class="{{ tag }}">
+  <main>
 {%- if title %}  
 <h1>{{ title }}</h1>
 {%- endif %}
@@ -26,5 +27,14 @@
   <li class="top"><a href="..">Opp</a></li>
 	<li class="next">{%- if nextPost %}<a href="{{ nextPost.url }}">{{ nextPost.data.title or nextPost.fileSlug }}</a> ->{% endif %}</li>
 </ul>
+  </main>
+  <footer>
+   <a href="https://espenhw.github.io/skriblerier/">Espens skriblerier</a> © 2025 by <a href="https://github.com/espenhw/" target="_blank">Espen Wiborg</a>
+   is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>
+   <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+   <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+   <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+   <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+  </footer>
   </body>
 </html>
