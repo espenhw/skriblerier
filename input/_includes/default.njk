@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>{{ title }}</title>
+  </head>
+{%- set tag = tags[0] %}
+  <body class="{{ tag }}">
+{%- if title %}  
+<h1>{{ title }}</h1>
+{%- endif %}
+    {{ content | safe }}
+
+{%- if collections[tag] %}
+{%- set previousPost = collections[tag] | getPreviousCollectionItem %}
+{%- set nextPost = collections[tag] | getNextCollectionItem %}
+{%- endif %}
+<ul class="links-nextprev">
+	<li class="prev">{%- if previousPost %}<- <a href="{{ previousPost.url }}">{{ previousPost.data.title or previousPost.fileSlug }}</a>{% endif %}</li>
+  <li class="top"><a href="..">Opp</a></li>
+	<li class="next">{%- if nextPost %}<a href="{{ nextPost.url }}">{{ nextPost.data.title or nextPost.fileSlug }}</a> ->{% endif %}</li>
+</ul>
+  </body>
+</html>

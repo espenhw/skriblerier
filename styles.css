@@ -1,0 +1,37 @@
+body {
+    background-color: #222;
+    color: #ddd;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    max-width: 50em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+a {
+    color: inherit
+}
+
+.dikt p {
+    white-space: pre-wrap;
+}
+
+.dikt pre {
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.links-nextprev {
+    margin-left: -2em;
+    padding-left: 0;
+    margin-right: -2em;
+    padding-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+

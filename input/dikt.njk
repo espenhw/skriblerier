@@ -1,0 +1,12 @@
+---
+title: Dikt
+---
+<p>
+En samling dikt jeg har skrevet (eller gjendiktet) opp gjennom.   For det meste har de navn etter sånn ca. når de er skrevet, med løpenummer der det er relevant.
+</p>
+
+<ul>
+{%- for post in collections.dikt -%}
+  <li><a href="{{ post.url }}">{{ post.fileSlug }}{%- if post.data.title %} ({{ post.data.title }}){%- endif %}</a></li>
+{%- endfor -%}
+</ul>

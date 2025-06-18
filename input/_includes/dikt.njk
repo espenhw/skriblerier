@@ -1,0 +1,9 @@
+---
+layout: default.njk
+---
+{{ content | safe }}
+
+{%- if originaltitle %}
+<hr/>
+Etter <em>{{ originaltitle }}</em> - {{ author }}
+{%- endif %}
