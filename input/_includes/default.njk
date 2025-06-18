@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+{% set css %} {% include "styles.css" %} {% endset %}
+<!-- feed it through our cssmin filter to minify -->
+<style>
+	{{ css | cssmin | safe }}
+</style>
     <title>{{ title }}</title>
   </head>
 {%- set tag = tags[0] %}
