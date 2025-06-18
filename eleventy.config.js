@@ -1,5 +1,6 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 import CleanCSS from "clean-css";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default async function(eleventyConfig) {
   eleventyConfig.setInputDirectory("input")
@@ -13,4 +14,5 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;
 	});
+  eleventyConfig.addPlugin(HtmlBasePlugin);
 };
