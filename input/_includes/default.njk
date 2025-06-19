@@ -24,7 +24,9 @@
 {%- endif %}
 <ul class="links-nextprev">
 	<li class="prev">{%- if previousPost %}<- <a href="{{ previousPost.url }}">{{ previousPost.data.title or previousPost.fileSlug }}</a>{% endif %}</li>
+  {%- if page.fileSlug %}
   <li class="top"><a href="..">Opp</a></li>
+  {%- endif %}
 	<li class="next">{%- if nextPost %}<a href="{{ nextPost.url }}">{{ nextPost.data.title or nextPost.fileSlug }}</a> ->{% endif %}</li>
 </ul>
   </main>

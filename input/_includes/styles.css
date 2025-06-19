@@ -1,12 +1,15 @@
 body {
     background-color: #222;
     color: #ddd;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4em;
+	padding: 0;
+	margin: 0 auto;
     max-width: 50em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
+}
+
+main {
+	padding: 1rem 1rem 0 1rem;
 }
 
 a {
@@ -26,10 +29,7 @@ ul {
 }
 
 .links-nextprev {
-    margin-left: -2em;
-    padding-left: 0;
-    margin-right: -2em;
-    padding-right: 0;
+	padding: 1em 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -39,4 +39,5 @@ footer {
     text-align: center;
     font-size: small;
     font-style: italic;
+    padding: 0 1rem 1rem 1rem;
 }
