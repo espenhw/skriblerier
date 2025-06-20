@@ -6,6 +6,9 @@ layout: default.njk
 <li><a href="/dikt/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
 {%- endfor -%}
 </ul>
+{%- if title %}  
+<h1>{{ title }}</h1>
+{%- endif %}
 
 {{ content | safe }}
 

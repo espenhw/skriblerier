@@ -1,3 +1,4 @@
 export default {
-  "tags": ["prosa"]
+  "tags": ["prosa"],
+  "layout": "prosa.njk"
 }
