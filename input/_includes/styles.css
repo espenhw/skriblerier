@@ -29,6 +29,7 @@ ul {
 }
 
 .links-nextprev {
+    border-top: 1px dashed;
 	padding: 1em 0;
     width: 100%;
     display: flex;
@@ -40,4 +41,17 @@ footer {
     font-size: small;
     font-style: italic;
     padding: 0 1rem 1rem 1rem;
+}
+
+.tags {
+    font-size: smaller;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 0.5em;
+    border-bottom: 1px dashed
+}
+
+.tags li {
+    margin-right: 1em;
 }

@@ -1,6 +1,12 @@
 ---
 layout: default.njk
 ---
+<ul class="tags">
+{%- for tag in tags | relevant -%}
+<li><a href="/dikt/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+{%- endfor -%}
+</ul>
+
 {{ content | safe }}
 
 {%- if originaltitle %}

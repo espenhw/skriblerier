@@ -1,0 +1,11 @@
+---
+permalink: /dikt/tags/
+---
+<h1>Kategorier</h1>
+
+<ul>
+{% for t in collections.dikt | getAllTags %}
+	{% set tagUrl %}/dikt/tags/{{ t[0] | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ t[0] }}</a> ({{ t[1] }})</li>
+{% endfor %}
+</ul>

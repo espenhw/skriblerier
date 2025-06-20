@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Dikt i kategorien “{{ tag }}”
+permalink: /dikt/tags/{{ tag | slugify }}/
+---
+<ul>
+{%- for post in collections[tag] | sortByFile -%}
+  <li><a href="{{ post.url }}">{{ post.fileSlug }}{%- if post.data.title %} ({{ post.data.title }}){%- endif %}</a></li>
+{%- endfor -%}
+</ul>
+
+<p>Se <a href="/dikt/tags/">alle kategorier</a>.</p>
